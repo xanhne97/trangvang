@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang Vàng Crawler</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌐 Crawler Trang Vàng Việt Nam</h1>
+        <form method="post">
+            <label>🔗 Link ngành:</label>
+            <input type="text" name="url" required>
+            <label>📁 Tên ngành:</label>
+            <input type="text" name="industry">
+            <button type="submit">Crawl ngay</button>
+        </form>
+        {% if file_url %}
+            <p>✅ Crawl xong! <a href="{{ file_url }}">Tải file Excel</a></p>
+        {% endif %}
+    </div>
+</body>
+</html>
